@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 //cargamos el modelo de usuario y a la clase de autenficacion de Laravel
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-//g¡hola
+// hola
 class LoginController extends Controller
 {
     public function login(Request $request)

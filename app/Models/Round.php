@@ -5,14 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Book extends Model
-//hola
+class Round extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'title',
-        'description',
-        'user_id',
+        'jugador_id',
+        'round_player',
     ];
     public function getDescriptionAttribute($value)
     {
@@ -23,4 +21,6 @@ class Book extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public $timestamps = false;
 }

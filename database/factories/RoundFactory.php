@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Book>
  */
-class BookFactory extends Factory
+class RoundFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +17,8 @@ class BookFactory extends Factory
     public function definition()
     {
         return [
-            'user id' => rand(1, 10),
-            'title' => $faker->name(),
-            'description' => $this->faker->text(),
-            //
+            'jugador_id' => rand(1, 10),
+            'round_player' => rand(1,10),
         ];
     }
 }

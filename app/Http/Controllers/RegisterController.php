@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Resources\V1\BookResource;
+use App\Http\Resources\V1\RegisterResource;
 
-class BookController extends Controller
+class RegisterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -11,7 +11,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        return BookResource::collection(Book::latest()->paginate());
+        return RegisterResource::collection(Register::latest()->paginate());
     }
 
     /**
@@ -20,9 +20,9 @@ class BookController extends Controller
      * @param \App\Models\Book $book
      * @return \Illuminate\Http\Response
      */
-    public function show(Book $book)
+    public function show(Register $register)
     {
-        return new BookResource($book);
+        return new RegisterResource($register);
     }
 
     /**
@@ -31,9 +31,9 @@ class BookController extends Controller
      * @param \App\Models\Book $book
      * @return \Illuminate\Http\Response
     */
-    public function destroy(Book $book)
+    public function destroy(Register $register)
     {
-        if( $book->delete() ) {
+        if( $register->delete() ) {
             return response()->json([
                 'message' => 'Success'
             ],204);

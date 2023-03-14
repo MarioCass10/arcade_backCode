@@ -26,4 +26,4 @@ class Game extends Model
     //public $timestamps = false;
 
     public $timestamps = false;
-}
+} 

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+
 use App\Http\Controllers\Controller;
-use App\Models\Register;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -22,6 +23,19 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         //
+        $validation = $this->validate($request, [
+            'name' => 'required',
+            'telephone' => 'required|unique:users|max:11',
+            'password' => 'required|min:8|max:20',
+        ]);
+    
+        $user = new User();
+        $user->name = $request->name;
+        $user->telephone = $request->telephone;
+        $user->password = bcrypt($request->password);
+        $user->save();         
+
+        return response()->json($user->toArray()); 
     }
 
     /**

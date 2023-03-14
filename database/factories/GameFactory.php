@@ -17,8 +17,8 @@ class GameFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->firstName,
-            'jugador_id' => rand(1, 10),
+            'title' => (''),
+            'url' => (''),
         ];
     }
 }

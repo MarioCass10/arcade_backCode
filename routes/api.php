@@ -23,4 +23,4 @@ Route::apiResource('v1/books', BookV1::class)
       ->middleware('auth:sanctum');
 
 Route::post('login', [App\Http\Controllers\Api\LoginController::class, 'login']);
-
+Route::post('register', [App\Http\Controllers\Api\V1\RegisterController::class, 'store']);

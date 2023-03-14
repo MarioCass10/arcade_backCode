@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,7 @@ class LoginController extends Controller
     {
         $this->validateLogin($request);
         //Prueba 
-        if (Auth::attempt($request->only('email','password'))) {
+        if (Auth::attempt($request->only('telephone','password'))) {
             return response()->json([
                 'token' => $request->user()->createToken('token_acces')->plainTextToken,
                 'message' => 'Success'
@@ -30,7 +31,7 @@ class LoginController extends Controller
     public function validateLogin(Request $request)
     {
         return $request->validate([
-            'email' => 'required|email',
+            'telephone' => 'required',
             'password' => 'required',
         ]);
     }

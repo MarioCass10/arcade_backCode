@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('jugador_id');
+            $table->string('title');
+            $table->string('url');
         });
      }
 
      public function down(): void
      {
-         Schema::dropIfExists('games');
+        Schema::dropIfExists('games');
      }
     
 };

@@ -1,8 +1,10 @@
 <?php
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\V1\BookController as BookV1;
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -24,3 +26,4 @@ Route::apiResource('v1/books', BookV1::class)
 
 Route::post('login', [App\Http\Controllers\Api\LoginController::class, 'login']);
 Route::post('register', [App\Http\Controllers\Api\V1\RegisterController::class, 'store']);
+Route::get('security', [App\Http\Controllers\Api\V1\SecurityController::class,'index'])->middleware('auth:sanctum');

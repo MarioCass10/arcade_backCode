@@ -9,9 +9,8 @@ class Game extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'id',
-        'name',
-        'jugador_id',
+        'title',
+        'url',
     ];
     public function getDescriptionAttribute($value)
     {

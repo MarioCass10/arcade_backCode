@@ -5,12 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Register extends Model
+class Matchs extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'id',
-        'jugador_id',
+        'player1',
+        'player2',
+        'game',
+        'score1',
+        'score2',
+        'winner',
     ];
     public function getDescriptionAttribute($value)
     {
@@ -21,8 +25,6 @@ class Register extends Model
     {
         return $this->belongsTo(User::class);
     }
-
-    //public $timestamps = false;
 
     public $timestamps = false;
 }

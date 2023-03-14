@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
     \App\Models\User::factory(10)->create();
     \App\Models\Round::factory(10)->create();
     \App\Models\Game::factory(10)->create();
+    \App\Models\Matchs::factory(10)->create();
     }
 }

@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('matchs', function (Blueprint $table) {
             $table->id();
-            $table->string('player1');
-            $table->string('player2');
-            $table->string('game');
-            $table->integer('score1');
-            $table->integer('score2');
-            $table->string('winner');
-            $table->timestamps();
+            $table->unsignedbiginteger('player1')->nullable();
+            $table->unsignedbiginteger('player2');
+            $table->unsignedbiginteger('game_id');
+            $table->float('score1');
+            $table->float('score2');
+            $table->unsignedbiginteger('winner');
+            
         });
     }
 

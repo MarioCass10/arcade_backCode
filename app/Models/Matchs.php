@@ -11,7 +11,7 @@ class Matchs extends Model
     protected $fillable = [
         'player1',
         'player2',
-        'game',
+        'game_id',
         'score1',
         'score2',
         'winner',

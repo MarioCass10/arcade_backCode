@@ -20,9 +20,9 @@ class DatabaseSeeder extends Seeder
     $games = [
         ['title' => 'Street Fighter 2', 'url' => 'img\street-FIGTHER.png'],
         ['title' => 'Mortal Kombat 2', 'url' => 'img\mortal-kombat.png'],
-        ['title' => 'King of Fighters 98', 'url' => 'https://static.wikia.nocookie.net/kof/images/1/15/KOF98Logolat.png/revision/latest?cb=20130702193729&path-prefix=es'],
-        ['title' => 'Soccer Brawl', 'url' => 'https://www.bing.com/images/blob?bcid=qExy9tB9mWIFwQ'],
-        ['title' => 'Windjammers', 'url' => 'https://upload.wikimedia.org/wikipedia/fr/f/f4/Windjammers_Logo.png'],
+        ['title' => 'King of Fighters 98', 'url' => 'img\king-figther.jpg'],
+        ['title' => 'Soccer Brawl', 'url' => 'img\soccer_brawl.jpg'],
+        ['title' => 'Windjammers', 'url' => 'img\windjammers.jpg'],
         ['title' => 'Super Sidekicks 3', 'url' => 'https://www.culturaneogeo.com/reviews/sidekicks%203/1.jpg'],
         ['title' => 'Tetris', 'url' => 'https://w7.pngwing.com/pngs/837/225/png-transparent-tetris-ultimate-the-tetris-company-video-game-tetromino-80s-arcade-games-thumbnail.png'],
         ['title' => 'Marvel vs Capcom', 'url' => 'https://wowroms-photos.com/emulators-roms-logo/40/31997/420-420/Marvel+vs.+Capcom+-+Clash+of+Super+Heroes+(USA)-image.jpg'],

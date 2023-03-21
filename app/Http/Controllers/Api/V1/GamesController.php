@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Game;
 
 class GamesController extends Controller
 {
@@ -14,7 +15,8 @@ class GamesController extends Controller
      */
     public function games()
     {
-        //
+        
+        return Game::all();
     }
 
     /**

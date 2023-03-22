@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-    \App\Models\User::factory(10)->create();
+    //Crea la seed de User    
+    //\App\Models\User::factory(10)->create();
 
     $games = [
         ['title' => 'Street Fighter 2', 'url' => config('app.url').'/img/street-FIGTHER.png'],

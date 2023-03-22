@@ -28,3 +28,4 @@ Route::post('login', [App\Http\Controllers\Api\LoginController::class, 'login'])
 Route::post('register', [App\Http\Controllers\Api\V1\RegisterController::class, 'store']);
 Route::get('security', [App\Http\Controllers\Api\V1\SecurityController::class,'index'])->middleware('auth:sanctum');
 Route::get('games', [App\Http\Controllers\Api\V1\GamesController::class, 'games']);
+Route::get('users', [App\Http\Controllers\Api\V1\UserController::class, 'users']);

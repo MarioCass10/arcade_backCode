@@ -27,7 +27,7 @@ class UserFactory extends Factory
         
     }
 
-    
+    //Verifica el campo Correo
 
     /**
      * Indicate that the model's email address should be unverified.

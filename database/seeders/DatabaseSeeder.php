@@ -18,22 +18,22 @@ class DatabaseSeeder extends Seeder
     \App\Models\User::factory(10)->create();
 
     $games = [
-        ['title' => 'Street Fighter 2', 'url' => 'img\street-FIGTHER.png'],
-        ['title' => 'Mortal Kombat 2', 'url' => 'img\mortal-kombat.png'],
-        ['title' => 'King of Fighters 98', 'url' => 'img\king-figther.jpg'],
-        ['title' => 'Soccer Brawl', 'url' => 'img\soccer_brawl.jpg'],
-        ['title' => 'Windjammers', 'url' => 'img\windjammers.jpg'],
-        ['title' => 'Super Sidekicks 3', 'url' => 'https://www.culturaneogeo.com/reviews/sidekicks%203/1.jpg'],
-        ['title' => 'Tetris', 'url' => 'https://w7.pngwing.com/pngs/837/225/png-transparent-tetris-ultimate-the-tetris-company-video-game-tetromino-80s-arcade-games-thumbnail.png'],
-        ['title' => 'Marvel vs Capcom', 'url' => 'https://wowroms-photos.com/emulators-roms-logo/40/31997/420-420/Marvel+vs.+Capcom+-+Clash+of+Super+Heroes+(USA)-image.jpg'],
-        ['title' => 'X-Men vs Street Fighter', 'url' => 'https://static.wikia.nocookie.net/streetfighter/images/0/00/XMenSFLogo.png/revision/latest?cb=20141026064020&path-prefix=es'],
-        ['title' => 'Puzzle Bobble', 'url' => 'https://w7.pngwing.com/pngs/350/135/png-transparent-bubble-bobble-part-2-puzzle-bobble-4-bubble-bobble-plus-others-food-text-logo-thumbnail.png']
+        ['title' => 'Street Fighter 2', 'url' => config('app.url').'/img/street-FIGTHER.png'],
+        ['title' => 'Mortal Kombat 2', 'url' => config('app.url').'/img/mortal-komabt.png'],
+        ['title' => 'King of Fighters 98', 'url' => config('app.url').'/img/king_figther.jpg'],
+        ['title' => 'Soccer Brawl', 'url' => config('app.url').'/img/soccer_brawl.jpg'],
+        ['title' => 'Windjammers', 'url' => config('app.url').'/img/windjammers.png'],
+        ['title' => 'Super Sidekicks 3', 'url' => config('app.url').'/img/super_sidekicks_3.jpg'],
+        ['title' => 'Tetris', 'url' => config('app.url').'/img/tetris.png'],
+        ['title' => 'Marvel vs Capcom', 'url' => config('app.url').'/img/Marvel+vs.+Capcom.jpg'],
+        ['title' => 'X-Men vs Street Fighter', 'url' => config('app.url').'/img/x-men_vs_street_figther.png'],
+        ['title' => 'Puzzle Bobble', 'url' => config('app.url').'/img/puzzle_bobble.png']
     ];
 
     DB::table('games')->insert($games);
     
     \App\Models\Round::factory(10)->create();
-    //\App\Models\Game::factory(10)->create();
+    
     \App\Models\Matchs::factory(10)->create();
 
     }

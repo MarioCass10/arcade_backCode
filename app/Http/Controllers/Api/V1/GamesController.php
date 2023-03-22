@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Api\V1;
+use Illuminate\Support\Facades\DB;
 
 
 use App\Http\Controllers\Controller;
@@ -13,10 +14,14 @@ class GamesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function games()
-    {
-        
-        return Game::all();
+    public function games(Request $request)
+    {   
+        $games = Game::orderBy('title')
+            ->get();
+
+        //Retorna los resultados en orden alfabetico
+        //Se pueden ver desde el PostMan
+        return $games;
     }
 
     /**

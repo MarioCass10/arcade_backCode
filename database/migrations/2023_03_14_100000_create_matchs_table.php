@@ -16,8 +16,8 @@ return new class extends Migration
             $table->unsignedbiginteger('player1')->nullable();
             $table->unsignedbiginteger('player2');
             $table->unsignedbiginteger('game_id');
-            $table->float('score1');
-            $table->float('score2');
+            $table->unsignedbiginteger('score1');
+            $table->unsignedbiginteger('score2');
             $table->unsignedbiginteger('winner');
             
         });

@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Game extends Model
+class MatchType extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'match_type_id',
         'title',
-        'url',
-        
     ];
     public function getDescriptionAttribute($value)
     {

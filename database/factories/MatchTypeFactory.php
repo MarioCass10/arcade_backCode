@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Book>
  */
-class GameFactory extends Factory
+class MatchType extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +17,7 @@ class GameFactory extends Factory
     public function definition()
     {
         $title = [
-            
-            'title'=>Str::random(10),
-            'url'=> $this->faker->url(),
-            'match_type_id' => rand(1,5),
+            'title' => Str::random(10),
         ];
 
         return $title;

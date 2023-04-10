@@ -26,7 +26,7 @@ Route::apiResource('v1/books', BookV1::class)
 
 Route::post('login', [App\Http\Controllers\Api\LoginController::class, 'login']);
 Route::post('register', [App\Http\Controllers\Api\V1\RegisterController::class, 'store']);
-Route::post('matchs', [App\Http\Controllers\Api\V1\MatchController::class, 'matchs']);
 Route::get('security', [App\Http\Controllers\Api\V1\SecurityController::class,'index'])->middleware('auth:sanctum');
 Route::get('games', [App\Http\Controllers\Api\V1\GamesController::class, 'games']);
 Route::get('users', [App\Http\Controllers\Api\V1\UserController::class, 'users']);
+Route::apiResource('matchs', App\Http\Controllers\Api\V1\MatchController::class);

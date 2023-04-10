@@ -14,6 +14,7 @@ return new class extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->id('id');
+            $table->integer('game_id');
             $table->unsignedBiginteger('match_type_id');
             $table->foreign('match_type_id')->references('id')->on('match_types');
             $table->string('title');

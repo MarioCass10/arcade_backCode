@@ -19,7 +19,7 @@ class MatchsFactory extends Factory
         return [
             'player1' =>rand(1,10),
             'player2' => rand(1,10),
-            'game_id' => rand(1,10),
+            'game_id'=> ran(1,10),           
             'score1' => rand(1,10),
             'score2' => rand(1,10),
             'winner' => rand(1,10),

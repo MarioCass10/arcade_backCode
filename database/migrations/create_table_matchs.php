@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('matchs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedbiginteger('player1')->nullable();
-            $table->unsignedbiginteger('player2');
+            $table->integer('player1');
+            $table->integer('player2');
             $table->unsignedbiginteger('game_id');
-            $table->unsignedbiginteger('score1');
-            $table->unsignedbiginteger('score2');
-            $table->unsignedbiginteger('winner');
+            //$table->foreign('game_id')->references('id')->on('games');
+            $table->unsignedbiginteger('score1')->nullable();
+            $table->unsignedbiginteger('score2')->nullable();
+            $table->unsignedbiginteger('winner')->nullable();
             
         });
     }
-
     /**
      * Reverse the migrations.
      */

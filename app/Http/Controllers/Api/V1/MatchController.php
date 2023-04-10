@@ -14,7 +14,7 @@ class MatchController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function matchs()
+    public function matchs(Request $request)
     {
         return Matchs::all();
     }
@@ -24,7 +24,17 @@ class MatchController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $match = new Matchs();
+        $match ->player1 = $request->player1;
+        $match ->player2 = $request->player2;
+
+
+        
+        $match->game_id = $request->game_id;
+        
+        $match->save();         
+
+        return $match; 
     }
 
     /**
@@ -32,7 +42,7 @@ class MatchController extends Controller
      */
     public function show(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -41,15 +51,21 @@ class MatchController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Matchs $user)
+    public function update(Request $request, Matchs $match)
     {
-        //
+        $match ->score1 = $request->score1;
+        $match ->score2 = $request->score2;
+        $match->winner = $request->winner;
+        
+        $match->save();         
+
+        return $match;
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Matchs $user)
+    public function destroy(Matchs $match)
     {
         //
     }

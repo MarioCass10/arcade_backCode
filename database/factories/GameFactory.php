@@ -21,6 +21,7 @@ class GameFactory extends Factory
             'title'=>Str::random(10),
             'url'=> $this->faker->url(),
             'match_type_id' => rand(1,5),
+            'game_id' => rand(1,10),
         ];
 
         return $title;

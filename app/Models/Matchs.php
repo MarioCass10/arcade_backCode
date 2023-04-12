@@ -9,11 +9,12 @@ class Matchs extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'player1',
-        'player2',
+        //'id',
+        'player1_id',
+        'player2_id',
         'score1',
         'score2',
-        'winner',
+        'winner_id',
     ];
     public function getDescriptionAttribute($value)
     {

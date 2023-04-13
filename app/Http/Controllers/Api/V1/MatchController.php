@@ -27,7 +27,7 @@ class MatchController extends Controller
     //Obtiene la informacion copn request y luego se guarda para archivarla en base de datos
     {
         $match = new Matchs();
-        //$match ->id = $request->id;
+        $match ->id = $request->id;
         $match ->player1_id = $request->player1_id;
         $match ->player2_id = $request->player2_id;
         

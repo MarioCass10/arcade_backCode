@@ -9,7 +9,7 @@ class Matchs extends Model
 {
     use HasFactory;
     protected $fillable = [
-        //'id',
+        'id',
         'player1_id',
         'player2_id',
         'score1',

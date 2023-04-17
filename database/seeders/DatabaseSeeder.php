@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
         ['title' => 'Windjammers', 'url' => config('app.url').'/img/windjammers.png','match_type_id'=>3, 'game_id'=>5],
         ['title' => 'Super Sidekicks 3', 'url' => config('app.url').'/img/super_sidekicks_3.jpg','match_type_id'=>3, 'game_id'=>6],
         ['title' => 'Tetris', 'url' => config('app.url').'/img/tetris.png','match_type_id'=>2, 'game_id'=>7],
-        ['title' => 'Marvel vs Capcom', 'url' => config('app.url').'/img/Marvel+vs.+Capcom.jpg','match_type_id'=>1, 'game_id'=>8],
+        ['title' => 'Marvel vs Capcom', 'url' => config('app.url').'/img/marvel_capcom.jpg','match_type_id'=>1, 'game_id'=>8],
         ['title' => 'X-Men vs Street Fighter', 'url' => config('app.url').'/img/x-men_vs_street_figther.png','match_type_id'=>1, 'game_id'=>9],
         ['title' => 'Puzzle Bobble', 'url' => config('app.url').'/img/puzzle_bobble.png','match_type_id'=>2, 'game_id'=>10]
     ];

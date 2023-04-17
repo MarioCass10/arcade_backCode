@@ -14,9 +14,14 @@ class MatchController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function matchs(Request $request)
+    public function index(Request $request)
     {
-        return Matchs::all();
+        return Matchs::get();
+        
+        /*$matchs = Matchs::orderBy('id')
+            ->get();
+
+        return $matchs*/
     }
 
     /**
@@ -41,9 +46,9 @@ class MatchController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Request $request)
+    public function show(Request $request, Matchs $match)
     {
-        
+        return $match->load(['id'],['player1_id'],['player2_id'],['game_id'],['score1'],['score2'],['winner_id']);        
     }
 
     /**

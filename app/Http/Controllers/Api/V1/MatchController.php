@@ -17,11 +17,6 @@ class MatchController extends Controller
     public function index(Request $request)
     {
         return Matchs::get();
-        
-        /*$matchs = Matchs::orderBy('id')
-            ->get();
-
-        return $matchs*/
     }
 
     /**

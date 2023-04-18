@@ -30,7 +30,6 @@ class MatchController extends Controller
         $match ->id = $request->id;
         $match ->player1_id = $request->player1_id;
         $match ->player2_id = $request->player2_id;
-        
         $match->game_id = $request->game_id;
         
         $match->save();         

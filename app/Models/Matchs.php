@@ -12,6 +12,7 @@ class Matchs extends Model
         'id',
         'player1_id',
         'player2_id',
+        'game_id',
         'score1',
         'score2',
         'winner_id',

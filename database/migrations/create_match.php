@@ -16,11 +16,9 @@ return new class extends Migration
             $table->integer('player1_id');
             $table->integer('player2_id');
             $table->unsignedbiginteger('game_id');
-            //$table->foreign('game_id')->references('id')->on('games');
             $table->unsignedbiginteger('score1')->nullable();
             $table->unsignedbiginteger('score2')->nullable();
             $table->unsignedbiginteger('winner_id')->nullable();
-            
         });
     }
     /**

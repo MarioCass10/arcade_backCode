@@ -22,8 +22,7 @@ class MatchsFactory extends Factory
             'game_id'=> ran(1,10),           
             'score1' => rand(1,10),
             'score2' => rand(1,10),
-            'winner_id' => rand(1,10),
-            
+            'winner_id' => rand(1,10),  
         ];
     }
 }

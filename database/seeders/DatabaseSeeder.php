@@ -38,14 +38,7 @@ class DatabaseSeeder extends Seeder
         ['title' => 'Puzzle Bobble', 'url' => config('app.url').'/img/puzzle_bobble.png','match_type_id'=>2, 'game_id'=>10]
     ];
     DB::table('games')->insert($games);
-
+    
     \App\Models\Round::factory(10)->create();
-    
-    //\App\Models\Matchs::factory(10)->create();
-
     }
-
-
-
-    
 }

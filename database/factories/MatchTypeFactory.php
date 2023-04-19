@@ -19,10 +19,6 @@ class MatchType extends Factory
         $title = [
             'title' => Str::random(10),
         ];
-
         return $title;
-        
-        
-        
     }
 }

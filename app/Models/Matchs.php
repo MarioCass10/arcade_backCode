@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Matchs extends Model
 {
@@ -22,7 +23,22 @@ class Matchs extends Model
         return substr($value, 1, 120);
     }
 
-    public function user()
+    public function player1(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function player2(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function games(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function winner(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }

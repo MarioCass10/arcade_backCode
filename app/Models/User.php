@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use Laravel\Sanctum\HasApiTokens;
@@ -23,6 +24,11 @@ class User extends Authenticatable
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function matchs(): BelongsTo
+    {
+        return $this->hasMany(Matchs::class);
     }
 
     public $timestamps = false;
